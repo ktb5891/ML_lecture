@@ -38,3 +38,23 @@ desc dept_emp;
 select B.emp_no, first_name, dept_no
 from employees A, dept_emp B
 where A.emp_no = B.emp_no;
+
+-- 각 사원들의 사원번호(emp_no), first_name, 현재 받는 급여액(salary)을 출력하세요
+desc employees;
+desc salaries;
+
+select A.emp_no, first_name, salary
+from employees A, salaries B
+where A.emp_no = B.emp_no
+and to_date = '9999-01-01';
+
+-- 각 사원들의 사원번호, first_name, 부서이름를 출력하세요
+desc dept_emp;
+desc departments;
+
+select A.emp_no, first_name, B.dept_name
+from employees A, departments B, dept_emp C
+where A.emp_no = C.emp_no
+and B.dept_no = C.dept_no
+order by emp_no asc;
+
