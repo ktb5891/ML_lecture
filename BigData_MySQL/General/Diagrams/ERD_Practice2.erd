@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="ERD_Practice2">
+	<entities>
+		<data-source id="mysql8-17a1d83f495-23e4016de75ef660">
+			<entity id="1" name="actor" fq-name="sakila.actor">
+				<path name="sakila"/>
+			</entity>
+			<entity id="2" name="actor_info" fq-name="sakila.actor_info">
+				<path name="sakila"/>
+			</entity>
+			<entity id="3" name="address" fq-name="sakila.address">
+				<path name="sakila"/>
+			</entity>
+			<entity id="4" name="category" fq-name="sakila.category">
+				<path name="sakila"/>
+			</entity>
+			<entity id="5" name="city" fq-name="sakila.city">
+				<path name="sakila"/>
+			</entity>
+			<entity id="6" name="country" fq-name="sakila.country">
+				<path name="sakila"/>
+			</entity>
+			<entity id="7" name="customer" fq-name="sakila.customer">
+				<path name="sakila"/>
+			</entity>
+			<entity id="8" name="customer_list" fq-name="sakila.customer_list">
+				<path name="sakila"/>
+			</entity>
+			<entity id="9" name="film" fq-name="sakila.film">
+				<path name="sakila"/>
+			</entity>
+			<entity id="10" name="film_actor" fq-name="sakila.film_actor">
+				<path name="sakila"/>
+			</entity>
+			<entity id="11" name="film_category" fq-name="sakila.film_category">
+				<path name="sakila"/>
+			</entity>
+			<entity id="12" name="film_list" fq-name="sakila.film_list">
+				<path name="sakila"/>
+			</entity>
+			<entity id="13" name="film_text" fq-name="sakila.film_text">
+				<path name="sakila"/>
+			</entity>
+			<entity id="14" name="inventory" fq-name="sakila.inventory">
+				<path name="sakila"/>
+			</entity>
+			<entity id="15" name="language" fq-name="sakila.`language`">
+				<path name="sakila"/>
+			</entity>
+			<entity id="16" name="nicer_but_slower_film_list" fq-name="sakila.nicer_but_slower_film_list">
+				<path name="sakila"/>
+			</entity>
+			<entity id="17" name="payment" fq-name="sakila.payment">
+				<path name="sakila"/>
+			</entity>
+			<entity id="18" name="rental" fq-name="sakila.rental">
+				<path name="sakila"/>
+			</entity>
+			<entity id="19" name="sales_by_film_category" fq-name="sakila.sales_by_film_category">
+				<path name="sakila"/>
+			</entity>
+			<entity id="20" name="sales_by_store" fq-name="sakila.sales_by_store">
+				<path name="sakila"/>
+			</entity>
+			<entity id="21" name="staff" fq-name="sakila.staff">
+				<path name="sakila"/>
+			</entity>
+			<entity id="22" name="staff_list" fq-name="sakila.staff_list">
+				<path name="sakila"/>
+			</entity>
+			<entity id="23" name="store" fq-name="sakila.store">
+				<path name="sakila"/>
+			</entity>
+		</data-source>
+	</entities>
+	<relations>
+		<relation name="fk_film_actor_actor" fq-name="sakila.film_actor.fk_film_actor_actor" type="fk" pk-ref="1" fk-ref="10"/>
+		<relation name="fk_customer_address" fq-name="sakila.customer.fk_customer_address" type="fk" pk-ref="3" fk-ref="7"/>
+		<relation name="fk_staff_address" fq-name="sakila.staff.fk_staff_address" type="fk" pk-ref="3" fk-ref="21"/>
+		<relation name="fk_store_address" fq-name="sakila.store.fk_store_address" type="fk" pk-ref="3" fk-ref="23"/>
+		<relation name="fk_film_category_category" fq-name="sakila.film_category.fk_film_category_category" type="fk" pk-ref="4" fk-ref="11"/>
+		<relation name="fk_address_city" fq-name="sakila.address.fk_address_city" type="fk" pk-ref="5" fk-ref="3"/>
+		<relation name="fk_city_country" fq-name="sakila.city.fk_city_country" type="fk" pk-ref="6" fk-ref="5"/>
+		<relation name="fk_payment_customer" fq-name="sakila.payment.fk_payment_customer" type="fk" pk-ref="7" fk-ref="17"/>
+		<relation name="fk_rental_customer" fq-name="sakila.rental.fk_rental_customer" type="fk" pk-ref="7" fk-ref="18"/>
+		<relation name="fk_film_actor_film" fq-name="sakila.film_actor.fk_film_actor_film" type="fk" pk-ref="9" fk-ref="10"/>
+		<relation name="fk_film_category_film" fq-name="sakila.film_category.fk_film_category_film" type="fk" pk-ref="9" fk-ref="11"/>
+		<relation name="fk_inventory_film" fq-name="sakila.inventory.fk_inventory_film" type="fk" pk-ref="9" fk-ref="14"/>
+		<relation name="fk_rental_inventory" fq-name="sakila.rental.fk_rental_inventory" type="fk" pk-ref="14" fk-ref="18"/>
+		<relation name="fk_film_language_original" fq-name="sakila.film.fk_film_language_original" type="fk" pk-ref="15" fk-ref="9"/>
+		<relation name="fk_film_language" fq-name="sakila.film.fk_film_language" type="fk" pk-ref="15" fk-ref="9"/>
+		<relation name="fk_payment_rental" fq-name="sakila.payment.fk_payment_rental" type="fk" pk-ref="18" fk-ref="17"/>
+		<relation name="fk_payment_staff" fq-name="sakila.payment.fk_payment_staff" type="fk" pk-ref="21" fk-ref="17"/>
+		<relation name="fk_rental_staff" fq-name="sakila.rental.fk_rental_staff" type="fk" pk-ref="21" fk-ref="18"/>
+		<relation name="fk_store_staff" fq-name="sakila.store.fk_store_staff" type="fk" pk-ref="21" fk-ref="23"/>
+		<relation name="fk_customer_store" fq-name="sakila.customer.fk_customer_store" type="fk" pk-ref="23" fk-ref="7"/>
+		<relation name="fk_inventory_store" fq-name="sakila.inventory.fk_inventory_store" type="fk" pk-ref="23" fk-ref="14"/>
+		<relation name="fk_staff_store" fq-name="sakila.staff.fk_staff_store" type="fk" pk-ref="23" fk-ref="21"/>
+	</relations>
+</diagram>

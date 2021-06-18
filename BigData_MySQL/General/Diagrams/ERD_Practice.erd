@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="ERD_Practice">
+	<entities>
+		<data-source id="mysql8-17a1d83f495-23e4016de75ef660">
+			<entity id="1" name="cart" fq-name="employees.cart">
+				<path name="employees"/>
+			</entity>
+			<entity id="2" name="departments" fq-name="employees.departments">
+				<path name="employees"/>
+			</entity>
+			<entity id="3" name="dept1" fq-name="employees.dept1">
+				<path name="employees"/>
+			</entity>
+			<entity id="4" name="dept_emp" fq-name="employees.dept_emp">
+				<path name="employees"/>
+			</entity>
+			<entity id="5" name="dept_manager" fq-name="employees.dept_manager">
+				<path name="employees"/>
+			</entity>
+			<entity id="6" name="employees" fq-name="employees.employees">
+				<path name="employees"/>
+			</entity>
+			<entity id="7" name="salaries" fq-name="employees.salaries">
+				<path name="employees"/>
+			</entity>
+			<entity id="8" name="testtbl" fq-name="employees.testtbl">
+				<path name="employees"/>
+			</entity>
+			<entity id="9" name="testtbl2" fq-name="employees.testtbl2">
+				<path name="employees"/>
+			</entity>
+			<entity id="10" name="testtbl3" fq-name="employees.testtbl3">
+				<path name="employees"/>
+			</entity>
+			<entity id="11" name="testtbl4" fq-name="employees.testtbl4">
+				<path name="employees"/>
+			</entity>
+			<entity id="12" name="testview1" fq-name="employees.testview1">
+				<path name="employees"/>
+			</entity>
+			<entity id="13" name="titles" fq-name="employees.titles">
+				<path name="employees"/>
+			</entity>
+			<entity id="14" name="usertbl" fq-name="employees.usertbl">
+				<path name="employees"/>
+			</entity>
+		</data-source>
+	</entities>
+	<relations>
+		<relation name="dept_emp_ibfk_2" fq-name="employees.dept_emp.dept_emp_ibfk_2" type="fk" pk-ref="2" fk-ref="4"/>
+		<relation name="dept_manager_ibfk_2" fq-name="employees.dept_manager.dept_manager_ibfk_2" type="fk" pk-ref="2" fk-ref="5"/>
+		<relation name="dept_emp_ibfk_1" fq-name="employees.dept_emp.dept_emp_ibfk_1" type="fk" pk-ref="6" fk-ref="4"/>
+		<relation name="dept_manager_ibfk_1" fq-name="employees.dept_manager.dept_manager_ibfk_1" type="fk" pk-ref="6" fk-ref="5"/>
+		<relation name="salaries_ibfk_1" fq-name="employees.salaries.salaries_ibfk_1" type="fk" pk-ref="6" fk-ref="7"/>
+		<relation name="titles_ibfk_1" fq-name="employees.titles.titles_ibfk_1" type="fk" pk-ref="6" fk-ref="13"/>
+		<relation name="pk1" fq-name="employees.testtbl2.pk1" type="fk" pk-ref="8" fk-ref="9"/>
+		<relation name="cart_ibfk_1" fq-name="employees.cart.cart_ibfk_1" type="fk" pk-ref="14" fk-ref="1"/>
+	</relations>
+</diagram>
