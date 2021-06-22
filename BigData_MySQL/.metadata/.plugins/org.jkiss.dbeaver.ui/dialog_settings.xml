@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="DBeaver.DriverTabbedViewer">
+	</section>
+	<section name="DBeaver.ActiveWizardDialog.NewConnectionWizard">
+		<item key="DIALOG_X_ORIGIN" value="253"/>
+		<item key="DIALOG_Y_ORIGIN" value="34"/>
+		<item key="DIALOG_WIDTH" value="935"/>
+		<item key="DIALOG_HEIGHT" value="592"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+	<section name="DriverDownload">
+	</section>
+	<section name="DBeaver.DriverDownloadDialog">
+		<item key="DIALOG_X_ORIGIN" value="0"/>
+		<item key="DIALOG_Y_ORIGIN" value="0"/>
+		<item key="DIALOG_WIDTH" value="525"/>
+		<item key="DIALOG_HEIGHT" value="497"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+	<section name="DBeaver.QM.LogViewer">
+	</section>
+	<section name="ResultSetViewer">
+		<section name="presentations">
+			<section name="spreadsheet">
+				<item key="enabledPanelIds" value="value-view"/>
+				<item key="activePanelId" value="value-view"/>
+				<item key="panelRatio" value="300"/>
+				<item key="panelsVisible" value="false"/>
+				<item key="verticalLayout" value="false"/>
+			</section>
+		</section>
+		<section name="ErrorPresentation">
+		</section>
+		<section name="panel-column-aggregate">
+			<item key="groupByColumns" value="false"/>
+			<item key="groupAsStrings" value="false"/>
+			<section name="functions">
+				<section name="count">
+					<item key="enabled" value="true"/>
+					<item key="index" value="0"/>
+				</section>
+				<section name="countDistinct">
+					<item key="enabled" value="true"/>
+					<item key="index" value="1"/>
+				</section>
+				<section name="sum">
+					<item key="enabled" value="false"/>
+					<item key="index" value="-1"/>
+				</section>
+				<section name="avg">
+					<item key="enabled" value="false"/>
+					<item key="index" value="-1"/>
+				</section>
+				<section name="min">
+					<item key="enabled" value="false"/>
+					<item key="index" value="-1"/>
+				</section>
+				<section name="max">
+					<item key="enabled" value="false"/>
+					<item key="index" value="-1"/>
+				</section>
+				<section name="median">
+					<item key="enabled" value="false"/>
+					<item key="index" value="-1"/>
+				</section>
+				<section name="mode">
+					<item key="enabled" value="false"/>
+					<item key="index" value="-1"/>
+				</section>
+			</section>
+		</section>
+		<section name="panel-results-grouping">
+		</section>
+		<section name="panel-results-references">
+		</section>
+	</section>
+	<section name="DBeaver.ActiveWizardDialog.DiagramCreateWizard">
+		<item key="DIALOG_X_ORIGIN" value="458"/>
+		<item key="DIALOG_Y_ORIGIN" value="-55"/>
+		<item key="DIALOG_WIDTH" value="525"/>
+		<item key="DIALOG_HEIGHT" value="690"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+	<section name="DBeaver.ScriptSelectorPopup">
+		<item key="DIALOG_X_ORIGIN" value="443"/>
+		<item key="DIALOG_Y_ORIGIN" value="169"/>
+		<item key="DIALOG_WIDTH" value="555"/>
+		<item key="DIALOG_HEIGHT" value="354"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+</section>
