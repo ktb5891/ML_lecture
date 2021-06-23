@@ -91,11 +91,11 @@ def get_category(category_link, category_name):
     res = requests.get('http://corners.gmarket.co.kr' + sub_category['href'])
     soup = BeautifulSoup(res.content, 'html.parser')
     get_items(soup, category_name, sub_category.get_text())
-    # print(category_link, category_name, sub_category.get_text(), 'http://corners.gmarket.co.kr' + sub_category['href'])
+    print(category_link, category_name, sub_category.get_text(), 'http://corners.gmarket.co.kr' + sub_category['href'])
 
 
 
-conn = pymysql.connect(host='localhost', port=3306, user='root', passwd='1111', db='bestproducts', charset='utf8')
+conn = pymysql.connect(host='localhost', port=3306, user='root', passwd='1234', db='mydb', charset='utf8')
 cursor = conn.cursor()
 
 res = requests.get("http://corners.gmarket.co.kr")
@@ -104,5 +104,5 @@ soup = BeautifulSoup(res.content, "html.parser")
 categories = soup.select('div.gbest-cate ul.by-group li a')
 
 for category in categories:
-  # print('http://corners.gmarket.co.kr' + category['href'], category.get_text())
+  print('http://corners.gmarket.co.kr' + category['href'], category.get_text())
   get_category('http://corners.gmarket.co.kr' + category['href'], category.get_text())
