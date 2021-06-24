@@ -36,12 +36,109 @@ values('AJK','안중근', 1983, '해주', '010', '1231234', 178, '2000-01-04');
 insert into userTBL 
 values('YBK','윤봉길', 1984, '이천', '010', '5555555', 176, '2000-01-05');
 
+select * from usertbl;
+
+drop table buyTBL;
+create table buyTBL(
+  num          int auto_increment not null primary key,
+  userid       char(8) not null,
+  productName  char(5),
+  groupName    char(5),
+  price        int not null,
+  amount       smallint not null,
+  foreign KEY(userid) references userTBL(userid)
+) default charset=utf8 collate=utf8_bin;
+desc buyTBL;
+
+insert into buyTBL(userid, productName, groupName, price, amount) 
+            values('YKS', '운동화', '의류', 30, 2);
+insert into buyTBL(userid, productName, groupName, price, amount) 
+            values('YKS', '노트북', '전자', 1000, 1);
+insert into buyTBL(userid, productName, groupName, price, amount) 
+            values('LSH', '모니터', '전자', 200, 1);
+insert into buyTBL(userid, productName, groupName, price, amount) 
+            values('YBK', '모니터', '전자', 200, 5);
+insert into buyTBL(userid, productName, groupName, price, amount) 
+            values('YKS', '청바지', '의류', 50, 2);
+insert into buyTBL(userid, productName, groupName, price, amount) 
+            values('YBK', '메모리', '전자', 80, 10);
+insert into buyTBL(userid, productName, groupName, price, amount) 
+            values('AJK', '책', '도서', 15, 5);
+
+-- 외래키 제약조건 위반
+-- buyTBL의 userid 는 userTBL의 userid값 중에서만
+-- 사용할 수 있음           
+-- insert into buyTBL(userid, productName, groupName, price, amount) 
+--          values('KKK', '책', '도서', 15, 5);
+
+select * from buyTBL;
+
+
+insert into buyTBL(userid, productName, groupName, price, amount) 
+            values('EJMD', '운동화', '의류', 30, 2);
+
+set autocommit = 0;
+select @@autocommit;
+
+commit;
+
+insert into buyTBL(userid, productName, groupName, price, amount) values('EJMD', '모니터', '전자', 200, 3);
+
+select * from buyTBL;
+
+rollback;
+
+use goodsdb;
+show tables;
+
+
+show tables;
+select database();
+use mydb;
+select * from product2;
+
+create table product3(
+  product_code    varchar(20) not null,
+  title           varchar(200) not null,
+  origin_price    int,
+  discount_price  int,
+  discount_rate   int,
+  delivery        varchar(2),
+  primary key(product_code)
+);
+
+desc product3;
+
+create table ranking(
+  id   int unsigned not null auto_increment,
+  category  varchar(50),
+  subcategory  varchar(50),
+  ranking   int not null,
+  product_code  varchar(20) not null,
+  primary key(id)
+);
+desc ranking;
+
+-- insert into product3 values(215673140, )
 
 
 
 
 
+create database bestproducts default charset=utf8 collate=utf8_bin;
 
+use bestproducts;
+select database();
+
+show tables;
+
+desc items;
+
+desc ranking;
+
+select * from ranking;
+
+select * from items;
 
 
 
